@@ -34,3 +34,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+## Main Idea
+we want to have a gifting application
+1. you come in and setup a group
+2. you add people to that group
+3. everyone can add their own list
+4. once in a group, you can see everyone else's list in the group
+5. you can edit your list but cannot see what has been bought off of it
+6. if you click on someone else's list you can see waht has been bought, and by whom

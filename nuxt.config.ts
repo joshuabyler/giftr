@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     }
   },
   ssr: true,
-  ui: {
-    global: true
-  }
+  // ui: {
+  //   global: true
+  // }
 });

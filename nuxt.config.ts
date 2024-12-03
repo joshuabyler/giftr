@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     // baseURL: 'https://joshuabyler.github.io/sheets/'
   },
   devtools: { enabled: true },
-  css: ['@/assets/css/tailwind.css'],
+  css: ['@/assets/styles/tailwind.css', '@/assets/styles/main.scss'],
   compatibilityDate: '2024-11-03',
   nitro: {
     preset: 'github-pages'
@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     }
   },
   ssr: true,
-  // ui: {
-  //   global: true
-  // }
+  ui: {
+    global: true
+  }
 });

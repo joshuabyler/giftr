@@ -2,8 +2,7 @@
 </script>
 
 <template>
-  <div>
-    <navigation />
-    <NuxtPage/>
+  <div class="list">
+    <p>list</p>
   </div>
 </template>

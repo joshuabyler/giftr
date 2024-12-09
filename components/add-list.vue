@@ -16,12 +16,6 @@ const props = defineProps({
           <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1" @click="props.isOpen = false" />
         </div>
       </template>
-
-      <Placeholder class="h-32" />
-
-      <template #footer>
-        <Placeholder class="h-8" />
-      </template>
     </UCard>
   </UModal>
 </template>

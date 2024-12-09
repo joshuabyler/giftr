@@ -1,20 +1,11 @@
 <script setup lang="ts">
+import { useStore } from '@/stores';
 
-const lists = ref([
-  {
-    name: 'list1',
-    id: 1
-  },
-  {
-    name: 'list2',
-    id: 2
-  }
-])
+const store = useStore();
 
 const state = reactive({
   groupName: undefined,
-  groupNumber: undefined,
-  lists
+  groupNumber: undefined
 })
 
 const isOpen = ref(false);
@@ -29,8 +20,8 @@ const isOpen = ref(false);
     <div class="group-lists">
       <p>if there are no lists here, add one.  If there are lists then you can manage the lists here without
       opening them.  Managing them means deleting, changing the owner, and then being able to open and edit it.</p>
-      <div v-for="list in lists" :key="list.id" class="list">
-        <UButton>{{ list.name }}</UButton>
+      <div v-for="list in store.fakeLists" :key="list.id" class="list">
+        <NuxtLink :to="`/lists/${list.id}`">{{ list.name }}</NuxtLink>
       </div>
       <UButton @click="isOpen = true">Add List</UButton>
     </div>
@@ -44,12 +35,6 @@ const isOpen = ref(false);
             </h3>
             <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1" @click="isOpen = false" />
           </div>
-        </template>
-
-        <Placeholder class="h-32" />
-
-        <template #footer>
-          <Placeholder class="h-8" />
         </template>
       </UCard>
     </UModal>
